@@ -3,6 +3,7 @@ package info.movito.themoviedbapi;
 import info.movito.themoviedbapi.model.Artwork;
 import info.movito.themoviedbapi.model.JobDepartment;
 import info.movito.themoviedbapi.model.MovieDb;
+import info.movito.themoviedbapi.model.config.Country;
 import info.movito.themoviedbapi.model.config.Timezone;
 import info.movito.themoviedbapi.model.config.TmdbConfiguration;
 import info.movito.themoviedbapi.tools.*;
@@ -222,6 +223,8 @@ public class TmdbApi {
     public TmdbFind getFind() {
         return new TmdbFind(this);
     }
+
+    public List<Country> getCountries() { return new TmdbCountries(this).getCountries(); }
 
 
     /**

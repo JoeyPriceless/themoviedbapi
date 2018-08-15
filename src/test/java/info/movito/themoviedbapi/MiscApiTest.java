@@ -1,6 +1,7 @@
 package info.movito.themoviedbapi;
 
 import info.movito.themoviedbapi.model.*;
+import info.movito.themoviedbapi.model.config.Country;
 import info.movito.themoviedbapi.model.config.TmdbConfiguration;
 import info.movito.themoviedbapi.model.core.ResponseStatusException;
 import info.movito.themoviedbapi.model.keywords.Keyword;
@@ -29,6 +30,13 @@ public class MiscApiTest extends AbstractTmdbApiTest {
         assertTrue("No backdrop sizes", tmdbConfig.getBackdropSizes().size() > 0);
         assertTrue("No poster sizes", tmdbConfig.getPosterSizes().size() > 0);
         assertTrue("No profile sizes", tmdbConfig.getProfileSizes().size() > 0);
+    }
+
+
+    @Test
+    public void testGetCountries() throws Exception {
+        List<Country> result = tmdb.getCountries();
+        assertFalse("Countries is empty", result.isEmpty());
     }
 
 

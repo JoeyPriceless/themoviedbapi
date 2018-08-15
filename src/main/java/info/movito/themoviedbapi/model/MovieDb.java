@@ -3,6 +3,7 @@ package info.movito.themoviedbapi.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import info.movito.themoviedbapi.TmdbMovies;
+import info.movito.themoviedbapi.model.config.Country;
 import info.movito.themoviedbapi.model.core.IdElement;
 import info.movito.themoviedbapi.model.core.MovieKeywords;
 import info.movito.themoviedbapi.model.core.ResultsPage;
@@ -54,7 +55,7 @@ public class MovieDb extends IdElement implements Multi {
     @JsonProperty("production_companies")
     private List<ProductionCompany> productionCompanies;
     @JsonProperty("production_countries")
-    private List<ProductionCountry> productionCountries;
+    private List<Country> productionCountries;
 
     @JsonProperty("revenue")
     private long revenue;
@@ -186,7 +187,7 @@ public class MovieDb extends IdElement implements Multi {
     }
 
 
-    public List<ProductionCountry> getProductionCountries() {
+    public List<Country> getProductionCountries() {
         return productionCountries;
     }
 
