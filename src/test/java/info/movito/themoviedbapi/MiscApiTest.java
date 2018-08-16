@@ -2,6 +2,7 @@ package info.movito.themoviedbapi;
 
 import info.movito.themoviedbapi.model.*;
 import info.movito.themoviedbapi.model.config.Country;
+import info.movito.themoviedbapi.model.config.Language;
 import info.movito.themoviedbapi.model.config.TmdbConfiguration;
 import info.movito.themoviedbapi.model.core.ResponseStatusException;
 import info.movito.themoviedbapi.model.keywords.Keyword;
@@ -37,6 +38,12 @@ public class MiscApiTest extends AbstractTmdbApiTest {
     public void testGetCountries() throws Exception {
         List<Country> result = tmdb.getCountries();
         assertFalse("Countries is empty", result.isEmpty());
+    }
+
+    @Test
+    public void testGetLanguages() throws Exception {
+        List<Language> result = tmdb.getLanguages();
+        assertFalse("Languages is empty", result.isEmpty());
     }
 
 

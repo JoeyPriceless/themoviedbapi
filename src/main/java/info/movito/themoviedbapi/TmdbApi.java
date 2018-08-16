@@ -4,6 +4,7 @@ import info.movito.themoviedbapi.model.Artwork;
 import info.movito.themoviedbapi.model.JobDepartment;
 import info.movito.themoviedbapi.model.MovieDb;
 import info.movito.themoviedbapi.model.config.Country;
+import info.movito.themoviedbapi.model.config.Language;
 import info.movito.themoviedbapi.model.config.Timezone;
 import info.movito.themoviedbapi.model.config.TmdbConfiguration;
 import info.movito.themoviedbapi.tools.*;
@@ -225,6 +226,8 @@ public class TmdbApi {
     }
 
     public List<Country> getCountries() { return new TmdbCountries(this).getCountries(); }
+
+    public List<Language> getLanguages() { return new TmdbLanguage(this).getLanguages(); }
 
 
     /**
